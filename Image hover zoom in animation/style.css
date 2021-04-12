@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #DBE7E6;
+}
+
+/* container measurements according to need */
+.row-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+
+.image-container{
+    width: 30vw;
+    height: 45vw;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+img:hover{
+    transform: scale(1.08);
+}
