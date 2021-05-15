@@ -1,0 +1,105 @@
+body{
+    background-color: rgb(199, 247, 244);
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+
+span{
+    word-wrap:initial;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-bound{
+    height: 45vw;
+    width: 30vw;
+    max-width: 300px;
+    max-height: 450px;
+    perspective: 1000px;
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    cursor:pointer;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.front, .back{
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    backface-visibility: hidden;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.front{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 1)), url("Images/front_img.jpg");
+    background-size: 100% 100%;
+}
+
+.front-content{
+    position: absolute;
+    text-align: center;
+    height: 40%;
+    width: 100%;
+    bottom: 1em;
+}
+
+.front-content h2, p{
+    color: whitesmoke;
+    word-wrap: break-word;
+}
+
+.back{
+    background-color: rgb(180, 216, 235);
+    transform: rotateY(180deg);
+}
+
+.back-content {
+    position: absolute;
+    text-align: center;
+    height: 40%;
+    width: 95%;
+    padding:4px;
+    bottom: 5em;
+}
+
+.card-contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+}
+
+.card-icon{
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.card-icon:hover img{
+    filter: invert(1);
+}
+
+.card-icon img{
+    width: 2em;
+}
+
+.card-bound:hover .card{
+    transform: rotateY(180deg);
+}
