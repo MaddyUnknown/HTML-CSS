@@ -40,7 +40,7 @@ span{
     height : 100%;
     backface-visibility: hidden;
     border-radius: 5%;
-    overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .front{
@@ -55,6 +55,7 @@ span{
     height: 40%;
     width: 100%;
     bottom: 1em;
+    transform: translateZ(15px);
 }
 
 .front-content h2, p{
@@ -74,6 +75,8 @@ span{
     width: 95%;
     padding:4px;
     bottom: 5em;
+    transform: translateZ(15px);
+    transform-style: preserve-3d;
 }
 
 .card-contacts{
@@ -81,6 +84,7 @@ span{
     justify-content: center;
     align-items: center;
     height: 4em;
+    transform: translateZ(5px);
 }
 
 .card-icon{
